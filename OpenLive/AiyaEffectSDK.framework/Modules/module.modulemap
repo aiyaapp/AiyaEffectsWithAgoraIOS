@@ -1,0 +1,6 @@
+framework module AiyaEffectSDK {
+  umbrella header "AiyaEffectSDK.h"
+
+  export *
+  module * { export * }
+}
