@@ -63,8 +63,9 @@ public:
             handler = [[AYEffectHandler alloc]init];
         }
 
-        [handler setBigEye:1];
-        [handler setBeauty:1];
+        [handler setBigEye:0.2];
+        [handler setSlimFace:0.2];
+        [handler setSmooth:1];
         [handler setEffectPath:effectPath];
         [handler processWithPixelBuffer:bgraCVPixelBuffer];
         [EAGLContext setCurrentContext:context];
