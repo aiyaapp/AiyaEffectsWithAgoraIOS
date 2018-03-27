@@ -23,6 +23,8 @@
 
 NSString *effectPath = @"";
 
+dispatch_queue_t videoFrameProcessQueue = dispatch_queue_create("AgoreVideoFrameProcessQueue", 0);
+
 class AgoraVideoFrameObserver : public agora::media::IVideoFrameObserver
 {
 private:
@@ -31,56 +33,75 @@ private:
     
     AYEffectHandler *handler;
     AYRawBGRABufferUtil *bgraUtil;
+    
+    bool stopQueue;
+    
 public:
+    
+    AgoraVideoFrameObserver()
+    {
+        stopQueue = false;
+    }
+    
     virtual bool onCaptureVideoFrame(VideoFrame& videoFrame) override
     {
-        
-        int len = videoFrame.width * videoFrame.height * 4;
-        
-        if (bgra_len != len) {
-            if (bgra != NULL) {
-                free(bgra);
-                std::cout << "free (bgra)" << std::endl;
+        dispatch_sync(videoFrameProcessQueue, ^{
+            
+            if (stopQueue) {
+                std::cout << "onCaptureVideoFrame error : Queue has stopped" << std::endl;
+                return;
+            }
+
+            int len = videoFrame.width * videoFrame.height * 4;
+            
+            if (bgra_len != len) {
+                if (bgra != NULL) {
+                    free(bgra);
+                    std::cout << "free (bgra)" << std::endl;
+                    
+                    if (!bgraUtil) {
+                        [bgraUtil releaseGLResources];
+                    }
+                }
+                
+                std::cout << "malloc (bgra)" << std::endl;
+                bgra = (uint8_t *)malloc(sizeof(uint8_t)*len);
+                bgra_len = len;
             }
             
-            std::cout << "malloc (bgra)" << std::endl;
-            bgra = (uint8_t *)malloc(sizeof(uint8_t)*len);
-            bgra_len = len;
-        }
-        
-        int bgra_stride = videoFrame.width * 4;
-        
-        libyuv::I420ToARGB((uint8_t *)videoFrame.yBuffer, videoFrame.yStride, (uint8_t *)videoFrame.uBuffer, videoFrame.uStride, (uint8_t *)videoFrame.vBuffer, videoFrame.vStride, bgra, bgra_stride, videoFrame.width, videoFrame.height);
-        
-        if (!bgraUtil) {
-            bgraUtil = [AYRawBGRABufferUtil new];
-        }
-        
-        CVPixelBufferRef bgraCVPixelBuffer = [bgraUtil rawBGRADataToCVPixelBuffer:bgra width:videoFrame.width height:videoFrame.height rotate:-M_PI_2];
-        
-        EAGLContext *context = [EAGLContext currentContext];
-        if (handler == NULL) {
-            handler = [[AYEffectHandler alloc]init];
-        }
+            int bgra_stride = videoFrame.width * 4;
+            
+            libyuv::I420ToARGB((uint8_t *)videoFrame.yBuffer, videoFrame.yStride, (uint8_t *)videoFrame.uBuffer, videoFrame.uStride, (uint8_t *)videoFrame.vBuffer, videoFrame.vStride, bgra, bgra_stride, videoFrame.width, videoFrame.height);
+            
+            if (!bgraUtil) {
+                bgraUtil = [AYRawBGRABufferUtil new];
+            }
+            
+            CVPixelBufferRef bgraCVPixelBuffer = [bgraUtil rawBGRADataToCVPixelBuffer:bgra width:videoFrame.width height:videoFrame.height rotate:-M_PI_2];
+            
+            EAGLContext *context = [EAGLContext currentContext];
+            if (handler == NULL) {
+                handler = [[AYEffectHandler alloc]init];
+            }
 
-        [handler setBigEye:0.2];
-        [handler setSlimFace:0.2];
-        [handler setSmooth:1];
-        [handler setEffectPath:effectPath];
-        [handler processWithPixelBuffer:bgraCVPixelBuffer];
-        [EAGLContext setCurrentContext:context];
-        
-        bgraCVPixelBuffer = [bgraUtil CVPixelBufferToCVPixelBuffer:bgraCVPixelBuffer rotate:M_PI_2];
-        
-        CVPixelBufferLockBaseAddress(bgraCVPixelBuffer, 0);
-        
-        void *data = CVPixelBufferGetBaseAddress(bgraCVPixelBuffer);
-        memcpy(bgra, data, videoFrame.width * videoFrame.height * 4);
-        
-        CVPixelBufferUnlockBaseAddress(bgraCVPixelBuffer, 0);
-        
-        libyuv::ARGBToI420(bgra, bgra_stride, (uint8_t *)videoFrame.yBuffer, videoFrame.yStride, (uint8_t *)videoFrame.uBuffer, videoFrame.uStride, (uint8_t *)videoFrame.vBuffer, videoFrame.vStride,videoFrame.width, videoFrame.height);
-        
+            [handler setBigEye:0.2];
+            [handler setSlimFace:0.2];
+            [handler setSmooth:1];
+            [handler setEffectPath:effectPath];
+            [handler processWithPixelBuffer:bgraCVPixelBuffer];
+            [EAGLContext setCurrentContext:context];
+            
+            bgraCVPixelBuffer = [bgraUtil CVPixelBufferToCVPixelBuffer:bgraCVPixelBuffer rotate:M_PI_2];
+            
+            CVPixelBufferLockBaseAddress(bgraCVPixelBuffer, 0);
+            
+            void *data = CVPixelBufferGetBaseAddress(bgraCVPixelBuffer);
+            memcpy(bgra, data, videoFrame.width * videoFrame.height * 4);
+            
+            CVPixelBufferUnlockBaseAddress(bgraCVPixelBuffer, 0);
+            
+            libyuv::ARGBToI420(bgra, bgra_stride, (uint8_t *)videoFrame.yBuffer, videoFrame.yStride, (uint8_t *)videoFrame.uBuffer, videoFrame.uStride, (uint8_t *)videoFrame.vBuffer, videoFrame.vStride,videoFrame.width, videoFrame.height);
+        });
         
         return true;
     }
@@ -90,11 +111,19 @@ public:
     }
     
     virtual ~AgoraVideoFrameObserver(){
-        if (bgra != NULL) {
-            free(bgra);
-            std::cout << "free (bgra)" << std::endl;
-        }
-        bgra = NULL;
+        
+        dispatch_sync(videoFrameProcessQueue, ^{
+            if (bgra != NULL) {
+                free(bgra);
+                std::cout << "free (bgra)" << std::endl;
+            }
+            bgra = NULL;
+            bgra_len = 0;
+            bgraUtil = nil;
+            handler = nil;
+            
+            stopQueue = true;
+        });
     }
 };
 
@@ -417,6 +446,11 @@ public:
     NSLog(@"message : %@",message);
 }
 
-// ------哎吖科技添加代码  结束------//
+-(void)dealloc{
+    if (mediaEngine) {
+        mediaEngine->release();
+    }
+}
 
+// ------哎吖科技添加代码  结束------//
 @end
