@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "07D24CF21D866704002C69BF"
+               BlueprintIdentifier = "078012E81D1E57730093DE24"
                BuildableName = "OpenLive.app"
                BlueprintName = "OpenLive"
                ReferencedContainer = "container:OpenLive.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "07F5318B1E288883009BFE58"
+               BlueprintIdentifier = "07F531601E275B82009BFE58"
                BuildableName = "OpenLiveUITests.xctest"
                BlueprintName = "OpenLiveUITests"
                ReferencedContainer = "container:OpenLive.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "07D24CF21D866704002C69BF"
+            BlueprintIdentifier = "078012E81D1E57730093DE24"
             BuildableName = "OpenLive.app"
             BlueprintName = "OpenLive"
             ReferencedContainer = "container:OpenLive.xcodeproj">
@@ -65,7 +65,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "07D24CF21D866704002C69BF"
+            BlueprintIdentifier = "078012E81D1E57730093DE24"
             BuildableName = "OpenLive.app"
             BlueprintName = "OpenLive"
             ReferencedContainer = "container:OpenLive.xcodeproj">
@@ -84,7 +84,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "07D24CF21D866704002C69BF"
+            BlueprintIdentifier = "078012E81D1E57730093DE24"
             BuildableName = "OpenLive.app"
             BlueprintName = "OpenLive"
             ReferencedContainer = "container:OpenLive.xcodeproj">

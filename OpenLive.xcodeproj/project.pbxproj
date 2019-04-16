@@ -7,98 +7,96 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07D24CF81D866704002C69BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24CF71D866704002C69BF /* main.m */; };
-		07D24CFB1D866704002C69BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24CFA1D866704002C69BF /* AppDelegate.m */; };
-		07D24D011D866704002C69BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D24CFF1D866704002C69BF /* Main.storyboard */; };
-		07D24D031D866704002C69BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D24D021D866704002C69BF /* Assets.xcassets */; };
-		07D24D061D866704002C69BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D24D041D866704002C69BF /* LaunchScreen.storyboard */; };
-		07D24D151D8667DC002C69BF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D24D141D8667DC002C69BF /* AVFoundation.framework */; };
-		07D24D171D8667E7002C69BF /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D24D161D8667E7002C69BF /* VideoToolbox.framework */; };
-		07D24D191D8667EC002C69BF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D24D181D8667EC002C69BF /* libc++.tbd */; };
-		07D24D1B1D8667F5002C69BF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D24D1A1D8667F5002C69BF /* AudioToolbox.framework */; };
-		07D24D1D1D8667FB002C69BF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D24D1C1D8667FB002C69BF /* CoreMotion.framework */; };
-		07D24D1F1D866802002C69BF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D24D1E1D866802002C69BF /* CoreMedia.framework */; };
-		07D24D211D866809002C69BF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D24D201D866809002C69BF /* CoreTelephony.framework */; };
-		07D24D301D867644002C69BF /* KeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D231D867644002C69BF /* KeyCenter.m */; };
-		07D24D311D867644002C69BF /* LiveRoomViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D251D867644002C69BF /* LiveRoomViewController.mm */; };
-		07D24D321D867644002C69BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D271D867644002C69BF /* MainViewController.m */; };
-		07D24D331D867644002C69BF /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D291D867644002C69BF /* ProfileCell.m */; };
-		07D24D341D867644002C69BF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D2B1D867644002C69BF /* SettingsViewController.m */; };
-		07D24D351D867644002C69BF /* VideoViewLayouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D2D1D867644002C69BF /* VideoViewLayouter.m */; };
-		07D24D361D867644002C69BF /* VideoSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D2F1D867644002C69BF /* VideoSession.m */; };
-		07D29C3A1E9E187D00C3583C /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D29C391E9E187D00C3583C /* AgoraRtcEngineKit.framework */; };
-		07D29C3C1E9E192A00C3583C /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D29C3B1E9E192A00C3583C /* libresolv.tbd */; };
-		07F5318F1E288883009BFE58 /* OpenLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5318E1E288883009BFE58 /* OpenLiveUITests.m */; };
-		D32F4F5C1FC59EAD0028B16E /* AYRawBGRABufferUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D32F4F5B1FC59EAC0028B16E /* AYRawBGRABufferUtil.m */; };
-		D379418F1FFB9BCC00BFA0EC /* AiyaEffectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D379418E1FFB9BCC00BFA0EC /* AiyaEffectSDK.bundle */; };
-		D37941901FFB9BD700BFA0EC /* AiyaEffectSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37941811FFB9B5800BFA0EC /* AiyaEffectSDK.framework */; };
-		D37941911FFB9BD700BFA0EC /* AiyaEffectSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D37941811FFB9B5800BFA0EC /* AiyaEffectSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D37941951FFB9C0E00BFA0EC /* libyuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B91E581F21E385001DA5DB /* libyuv.a */; };
-		D3B91E611F21F258001DA5DB /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B91E601F21F258001DA5DB /* libiconv.tbd */; };
-		D3B91E631F21F270001DA5DB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B91E621F21F270001DA5DB /* libz.tbd */; };
-		D3CBC5951F220E16005C1616 /* gougou in Resources */ = {isa = PBXBuildFile; fileRef = D3CBC5941F220E16005C1616 /* gougou */; };
+		07130E8A1D22928200CC85D8 /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07130E891D22928200CC85D8 /* KeyCenter.swift */; };
+		0745273D1E9E050C0054D2D4 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0745273C1E9E050C0054D2D4 /* libresolv.tbd */; };
+		078012ED1D1E57730093DE24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078012EC1D1E57730093DE24 /* AppDelegate.swift */; };
+		078012EF1D1E57730093DE24 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078012EE1D1E57730093DE24 /* MainViewController.swift */; };
+		078012F21D1E57730093DE24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078012F01D1E57730093DE24 /* Main.storyboard */; };
+		078012F41D1E57730093DE24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078012F31D1E57730093DE24 /* Assets.xcassets */; };
+		078012F71D1E57730093DE24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078012F51D1E57730093DE24 /* LaunchScreen.storyboard */; };
+		0790F1141D1E6325003F8C18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0790F1131D1E6325003F8C18 /* AVFoundation.framework */; };
+		0790F1161D1E632D003F8C18 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0790F1151D1E632D003F8C18 /* CoreMedia.framework */; };
+		0790F1181D1E6332003F8C18 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0790F1171D1E6332003F8C18 /* CoreMotion.framework */; };
+		0790F11E1D1E639D003F8C18 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0790F11D1D1E639D003F8C18 /* AudioToolbox.framework */; };
+		0790F1201D1E63A2003F8C18 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0790F11F1D1E63A2003F8C18 /* VideoToolbox.framework */; };
+		0790F1221D1E63A8003F8C18 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0790F1211D1E63A8003F8C18 /* CoreTelephony.framework */; };
+		0790F1241D1E63DD003F8C18 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0790F1231D1E63DD003F8C18 /* SystemConfiguration.framework */; };
+		0790F1261D1E6450003F8C18 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0790F1251D1E6450003F8C18 /* SettingsViewController.swift */; };
+		0790F1281D1E645B003F8C18 /* LiveRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0790F1271D1E645B003F8C18 /* LiveRoomViewController.swift */; };
+		0790F1511D1E9631003F8C18 /* VideoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0790F1501D1E9631003F8C18 /* VideoSession.swift */; };
+		0790F1531D1E9781003F8C18 /* VideoViewLayouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0790F1521D1E9781003F8C18 /* VideoViewLayouter.swift */; };
+		0790F1641D1EBE24003F8C18 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0790F1631D1EBE24003F8C18 /* libc++.tbd */; };
+		0790F1691D1EEAB2003F8C18 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0790F1681D1EEAB2003F8C18 /* ProfileCell.swift */; };
+		07D29C381E9E152200C3583C /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D29C371E9E152200C3583C /* AgoraRtcEngineKit.framework */; };
+		07F531641E275B82009BFE58 /* OpenLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F531631E275B82009BFE58 /* OpenLiveUITests.swift */; };
+		D3D69BC32265B787005F82EF /* VideoProcess.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3D69BC22265B787005F82EF /* VideoProcess.mm */; };
+		D3D69BE22265BF85005F82EF /* AiyaEffectSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D69BCE2265B7D5005F82EF /* AiyaEffectSDK.framework */; };
+		D3D69BE32265BF85005F82EF /* AiyaEffectSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3D69BCE2265B7D5005F82EF /* AiyaEffectSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3D69BEB2265C95F005F82EF /* AiyaEffectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D3D69BEA2265C95F005F82EF /* AiyaEffectSDK.bundle */; };
+		D3D69BF82265CA31005F82EF /* mogulin in Resources */ = {isa = PBXBuildFile; fileRef = D3D69BF72265CA31005F82EF /* mogulin */; };
+		F25F5A728839E012C51CC7E1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B70FC0F83493878247735 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07F531911E288883009BFE58 /* PBXContainerItemProxy */ = {
+		07F531661E275B82009BFE58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07D24CEB1D866704002C69BF /* Project object */;
+			containerPortal = 078012E11D1E57730093DE24 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 07D24CF21D866704002C69BF;
+			remoteGlobalIDString = 078012E81D1E57730093DE24;
 			remoteInfo = OpenLive;
 		};
-		D37941801FFB9B5800BFA0EC /* PBXContainerItemProxy */ = {
+		D3D69BCD2265B7D5005F82EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */;
+			containerPortal = D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D37926EA1FCD081A007DB5E8;
 			remoteInfo = AiyaEffectSDK;
 		};
-		D37941821FFB9B5800BFA0EC /* PBXContainerItemProxy */ = {
+		D3D69BCF2265B7D5005F82EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */;
+			containerPortal = D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D37926F91FCD0892007DB5E8;
-			remoteInfo = AySDKCore;
+			remoteInfo = AyCore;
 		};
-		D37941841FFB9B5800BFA0EC /* PBXContainerItemProxy */ = {
+		D3D69BD12265B7D5005F82EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */;
+			containerPortal = D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D37927061FCD08A0007DB5E8;
-			remoteInfo = AyTrack;
+			remoteInfo = AyFaceTrack;
 		};
-		D37941861FFB9B5800BFA0EC /* PBXContainerItemProxy */ = {
+		D3D69BD32265B7D5005F82EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */;
+			containerPortal = D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D37927131FCD08AA007DB5E8;
 			remoteInfo = AyEffect;
 		};
-		D37941881FFB9B5800BFA0EC /* PBXContainerItemProxy */ = {
+		D3D69BD52265B7D5005F82EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */;
+			containerPortal = D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D37927201FCD08BB007DB5E8;
 			remoteInfo = AyBeauty;
 		};
-		D379418A1FFB9B5800BFA0EC /* PBXContainerItemProxy */ = {
+		D3D69BD72265B7D5005F82EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */;
+			containerPortal = D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D379272D1FCD08DA007DB5E8;
 			remoteInfo = AyShortVideoEffect;
 		};
-		D379418C1FFB9B6000BFA0EC /* PBXContainerItemProxy */ = {
+		D3D69BDA2265BF5B005F82EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */;
+			containerPortal = D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D37926E91FCD081A007DB5E8;
 			remoteInfo = AiyaEffectSDK;
 		};
-		D37941921FFB9BD700BFA0EC /* PBXContainerItemProxy */ = {
+		D3D69BE42265BF85005F82EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */;
+			containerPortal = D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D37926E91FCD081A007DB5E8;
 			remoteInfo = AiyaEffectSDK;
@@ -106,13 +104,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D37941941FFB9BD700BFA0EC /* Embed Frameworks */ = {
+		D3D69BE62265BF85005F82EF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D37941911FFB9BD700BFA0EC /* AiyaEffectSDK.framework in Embed Frameworks */,
+				D3D69BE32265BF85005F82EF /* AiyaEffectSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,73 +118,62 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07D24CF31D866704002C69BF /* OpenLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		07D24CF71D866704002C69BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07D24CF91D866704002C69BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		07D24CFA1D866704002C69BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		07D24D001D866704002C69BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		07D24D021D866704002C69BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		07D24D051D866704002C69BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		07D24D071D866704002C69BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07D24D141D8667DC002C69BF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		07D24D161D8667E7002C69BF /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		07D24D181D8667EC002C69BF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		07D24D1A1D8667F5002C69BF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		07D24D1C1D8667FB002C69BF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		07D24D1E1D866802002C69BF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		07D24D201D866809002C69BF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		07D24D221D867644002C69BF /* KeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCenter.h; sourceTree = "<group>"; };
-		07D24D231D867644002C69BF /* KeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyCenter.m; sourceTree = "<group>"; };
-		07D24D241D867644002C69BF /* LiveRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveRoomViewController.h; sourceTree = "<group>"; };
-		07D24D251D867644002C69BF /* LiveRoomViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LiveRoomViewController.mm; sourceTree = "<group>"; };
-		07D24D261D867644002C69BF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		07D24D271D867644002C69BF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		07D24D281D867644002C69BF /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
-		07D24D291D867644002C69BF /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
-		07D24D2A1D867644002C69BF /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		07D24D2B1D867644002C69BF /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		07D24D2C1D867644002C69BF /* VideoViewLayouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewLayouter.h; sourceTree = "<group>"; };
-		07D24D2D1D867644002C69BF /* VideoViewLayouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewLayouter.m; sourceTree = "<group>"; };
-		07D24D2E1D867644002C69BF /* VideoSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSession.h; sourceTree = "<group>"; };
-		07D24D2F1D867644002C69BF /* VideoSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSession.m; sourceTree = "<group>"; };
-		07D29C391E9E187D00C3583C /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
-		07D29C3B1E9E192A00C3583C /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
-		07F5318C1E288883009BFE58 /* OpenLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07F5318E1E288883009BFE58 /* OpenLiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenLiveUITests.m; sourceTree = "<group>"; };
-		07F531901E288883009BFE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D32F4F5A1FC59EAB0028B16E /* AYRawBGRABufferUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYRawBGRABufferUtil.h; sourceTree = "<group>"; };
-		D32F4F5B1FC59EAC0028B16E /* AYRawBGRABufferUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYRawBGRABufferUtil.m; sourceTree = "<group>"; };
-		D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AiyaEffectSDK.xcodeproj; path = ../AiyaEffectsIOS/AiyaEffectSDK/AiyaEffectSDK.xcodeproj; sourceTree = "<group>"; };
-		D379418E1FFB9BCC00BFA0EC /* AiyaEffectSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AiyaEffectSDK.bundle; sourceTree = "<group>"; };
-		D3B91E581F21E385001DA5DB /* libyuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libyuv.a; path = OpenLive/libyuv/lib/libyuv.a; sourceTree = "<group>"; };
-		D3B91E5A1F21E3A1001DA5DB /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = OpenLive/libcrypto.a; sourceTree = "<group>"; };
-		D3B91E601F21F258001DA5DB /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		D3B91E621F21F270001DA5DB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		D3CBC5941F220E16005C1616 /* gougou */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gougou; sourceTree = "<group>"; };
+		07130E891D22928200CC85D8 /* KeyCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCenter.swift; sourceTree = "<group>"; };
+		0745273C1E9E050C0054D2D4 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		078012E91D1E57730093DE24 /* OpenLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		078012EC1D1E57730093DE24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		078012EE1D1E57730093DE24 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		078012F11D1E57730093DE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		078012F31D1E57730093DE24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		078012F61D1E57730093DE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		078012F81D1E57730093DE24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0790F1131D1E6325003F8C18 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0790F1151D1E632D003F8C18 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0790F1171D1E6332003F8C18 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		0790F11D1D1E639D003F8C18 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0790F11F1D1E63A2003F8C18 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		0790F1211D1E63A8003F8C18 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0790F1231D1E63DD003F8C18 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0790F1251D1E6450003F8C18 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0790F1271D1E645B003F8C18 /* LiveRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveRoomViewController.swift; sourceTree = "<group>"; };
+		0790F1501D1E9631003F8C18 /* VideoSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSession.swift; sourceTree = "<group>"; };
+		0790F1521D1E9781003F8C18 /* VideoViewLayouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewLayouter.swift; sourceTree = "<group>"; };
+		0790F1631D1EBE24003F8C18 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		0790F1681D1EEAB2003F8C18 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		07D29C371E9E152200C3583C /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcEngineKit.framework; path = ../../../libs/AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
+		07F531611E275B82009BFE58 /* OpenLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F531631E275B82009BFE58 /* OpenLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLiveUITests.swift; sourceTree = "<group>"; };
+		07F531651E275B82009BFE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3D69BC02265B786005F82EF /* OpenLive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenLive-Bridging-Header.h"; sourceTree = "<group>"; };
+		D3D69BC12265B787005F82EF /* VideoProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoProcess.h; sourceTree = "<group>"; };
+		D3D69BC22265B787005F82EF /* VideoProcess.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoProcess.mm; sourceTree = "<group>"; };
+		D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AiyaEffectSDK.xcodeproj; path = "../../../../aiya-git/AiyaEffectsIOS/AiyaEffectSDK/AiyaEffectSDK.xcodeproj"; sourceTree = "<group>"; };
+		D3D69BEA2265C95F005F82EF /* AiyaEffectSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AiyaEffectSDK.bundle; sourceTree = "<group>"; };
+		D3D69BF72265CA31005F82EF /* mogulin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mogulin; sourceTree = "<group>"; };
+		F54B70FC0F83493878247735 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = ../../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		07D24CF01D866704002C69BF /* Frameworks */ = {
+		078012E61D1E57730093DE24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D24D191D8667EC002C69BF /* libc++.tbd in Frameworks */,
-				D3B91E611F21F258001DA5DB /* libiconv.tbd in Frameworks */,
-				D3B91E631F21F270001DA5DB /* libz.tbd in Frameworks */,
-				07D29C3C1E9E192A00C3583C /* libresolv.tbd in Frameworks */,
-				D37941951FFB9C0E00BFA0EC /* libyuv.a in Frameworks */,
-				07D29C3A1E9E187D00C3583C /* AgoraRtcEngineKit.framework in Frameworks */,
-				07D24D211D866809002C69BF /* CoreTelephony.framework in Frameworks */,
-				07D24D1F1D866802002C69BF /* CoreMedia.framework in Frameworks */,
-				07D24D1D1D8667FB002C69BF /* CoreMotion.framework in Frameworks */,
-				07D24D1B1D8667F5002C69BF /* AudioToolbox.framework in Frameworks */,
-				07D24D171D8667E7002C69BF /* VideoToolbox.framework in Frameworks */,
-				D37941901FFB9BD700BFA0EC /* AiyaEffectSDK.framework in Frameworks */,
-				07D24D151D8667DC002C69BF /* AVFoundation.framework in Frameworks */,
+				0745273D1E9E050C0054D2D4 /* libresolv.tbd in Frameworks */,
+				0790F1641D1EBE24003F8C18 /* libc++.tbd in Frameworks */,
+				07D29C381E9E152200C3583C /* AgoraRtcEngineKit.framework in Frameworks */,
+				0790F1241D1E63DD003F8C18 /* SystemConfiguration.framework in Frameworks */,
+				0790F1221D1E63A8003F8C18 /* CoreTelephony.framework in Frameworks */,
+				0790F1201D1E63A2003F8C18 /* VideoToolbox.framework in Frameworks */,
+				0790F11E1D1E639D003F8C18 /* AudioToolbox.framework in Frameworks */,
+				0790F1181D1E6332003F8C18 /* CoreMotion.framework in Frameworks */,
+				0790F1161D1E632D003F8C18 /* CoreMedia.framework in Frameworks */,
+				0790F1141D1E6325003F8C18 /* AVFoundation.framework in Frameworks */,
+				D3D69BE22265BF85005F82EF /* AiyaEffectSDK.framework in Frameworks */,
+				F25F5A728839E012C51CC7E1 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07F531891E288883009BFE58 /* Frameworks */ = {
+		07F5315E1E275B82009BFE58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -196,104 +183,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07D24CEA1D866704002C69BF = {
+		0745273B1E9E050C0054D2D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */,
-				07D24CF51D866704002C69BF /* OpenLive */,
-				07F5318D1E288883009BFE58 /* OpenLiveUITests */,
-				07D24CF41D866704002C69BF /* Products */,
-				07D24D131D8667DC002C69BF /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		07D24CF41D866704002C69BF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				07D24CF31D866704002C69BF /* OpenLive.app */,
-				07F5318C1E288883009BFE58 /* OpenLiveUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		07D24CF51D866704002C69BF /* OpenLive */ = {
-			isa = PBXGroup;
-			children = (
-				07D24CFF1D866704002C69BF /* Main.storyboard */,
-				07D24D261D867644002C69BF /* MainViewController.h */,
-				07D24D271D867644002C69BF /* MainViewController.m */,
-				07D24D2A1D867644002C69BF /* SettingsViewController.h */,
-				07D24D2B1D867644002C69BF /* SettingsViewController.m */,
-				07D24D241D867644002C69BF /* LiveRoomViewController.h */,
-				07D24D251D867644002C69BF /* LiveRoomViewController.mm */,
-				D32F4F5A1FC59EAB0028B16E /* AYRawBGRABufferUtil.h */,
-				D32F4F5B1FC59EAC0028B16E /* AYRawBGRABufferUtil.m */,
-				07D24D221D867644002C69BF /* KeyCenter.h */,
-				07D24D231D867644002C69BF /* KeyCenter.m */,
-				07D24D2E1D867644002C69BF /* VideoSession.h */,
-				07D24D2F1D867644002C69BF /* VideoSession.m */,
-				07D24D2C1D867644002C69BF /* VideoViewLayouter.h */,
-				07D24D2D1D867644002C69BF /* VideoViewLayouter.m */,
-				07D24D281D867644002C69BF /* ProfileCell.h */,
-				07D24D291D867644002C69BF /* ProfileCell.m */,
-				D3CBC5941F220E16005C1616 /* gougou */,
-				D379418E1FFB9BCC00BFA0EC /* AiyaEffectSDK.bundle */,
-				07D29C391E9E187D00C3583C /* AgoraRtcEngineKit.framework */,
-				07D24CF61D866704002C69BF /* Supporting Files */,
-			);
-			path = OpenLive;
-			sourceTree = "<group>";
-		};
-		07D24CF61D866704002C69BF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				07D24CF91D866704002C69BF /* AppDelegate.h */,
-				07D24CFA1D866704002C69BF /* AppDelegate.m */,
-				07D24D021D866704002C69BF /* Assets.xcassets */,
-				07D24D041D866704002C69BF /* LaunchScreen.storyboard */,
-				07D24D071D866704002C69BF /* Info.plist */,
-				07D24CF71D866704002C69BF /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		07D24D131D8667DC002C69BF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D3B91E621F21F270001DA5DB /* libz.tbd */,
-				D3B91E601F21F258001DA5DB /* libiconv.tbd */,
-				D3B91E5A1F21E3A1001DA5DB /* libcrypto.a */,
-				D3B91E581F21E385001DA5DB /* libyuv.a */,
-				07D29C3B1E9E192A00C3583C /* libresolv.tbd */,
-				07D24D201D866809002C69BF /* CoreTelephony.framework */,
-				07D24D1E1D866802002C69BF /* CoreMedia.framework */,
-				07D24D1C1D8667FB002C69BF /* CoreMotion.framework */,
-				07D24D1A1D8667F5002C69BF /* AudioToolbox.framework */,
-				07D24D181D8667EC002C69BF /* libc++.tbd */,
-				07D24D161D8667E7002C69BF /* VideoToolbox.framework */,
-				07D24D141D8667DC002C69BF /* AVFoundation.framework */,
+				0745273C1E9E050C0054D2D4 /* libresolv.tbd */,
+				F54B70FC0F83493878247735 /* Accelerate.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		07F5318D1E288883009BFE58 /* OpenLiveUITests */ = {
+		078012E01D1E57730093DE24 = {
 			isa = PBXGroup;
 			children = (
-				07F5318E1E288883009BFE58 /* OpenLiveUITests.m */,
-				07F531901E288883009BFE58 /* Info.plist */,
+				D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */,
+				078012EB1D1E57730093DE24 /* OpenLive */,
+				07F531621E275B82009BFE58 /* OpenLiveUITests */,
+				078012EA1D1E57730093DE24 /* Products */,
+				0745273B1E9E050C0054D2D4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		078012EA1D1E57730093DE24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				078012E91D1E57730093DE24 /* OpenLive.app */,
+				07F531611E275B82009BFE58 /* OpenLiveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		078012EB1D1E57730093DE24 /* OpenLive */ = {
+			isa = PBXGroup;
+			children = (
+				D3D69BEA2265C95F005F82EF /* AiyaEffectSDK.bundle */,
+				D3D69BF72265CA31005F82EF /* mogulin */,
+				078012F01D1E57730093DE24 /* Main.storyboard */,
+				078012EE1D1E57730093DE24 /* MainViewController.swift */,
+				0790F1251D1E6450003F8C18 /* SettingsViewController.swift */,
+				0790F1271D1E645B003F8C18 /* LiveRoomViewController.swift */,
+				07130E891D22928200CC85D8 /* KeyCenter.swift */,
+				0790F1501D1E9631003F8C18 /* VideoSession.swift */,
+				0790F1521D1E9781003F8C18 /* VideoViewLayouter.swift */,
+				0790F1681D1EEAB2003F8C18 /* ProfileCell.swift */,
+				07D29C371E9E152200C3583C /* AgoraRtcEngineKit.framework */,
+				0790F1191D1E633C003F8C18 /* Frameworks */,
+				078012EC1D1E57730093DE24 /* AppDelegate.swift */,
+				078012F31D1E57730093DE24 /* Assets.xcassets */,
+				078012F51D1E57730093DE24 /* LaunchScreen.storyboard */,
+				078012F81D1E57730093DE24 /* Info.plist */,
+				D3D69BC12265B787005F82EF /* VideoProcess.h */,
+				D3D69BC22265B787005F82EF /* VideoProcess.mm */,
+				D3D69BC02265B786005F82EF /* OpenLive-Bridging-Header.h */,
+			);
+			path = OpenLive;
+			sourceTree = "<group>";
+		};
+		0790F1191D1E633C003F8C18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0790F1631D1EBE24003F8C18 /* libc++.tbd */,
+				0790F1231D1E63DD003F8C18 /* SystemConfiguration.framework */,
+				0790F1211D1E63A8003F8C18 /* CoreTelephony.framework */,
+				0790F11F1D1E63A2003F8C18 /* VideoToolbox.framework */,
+				0790F11D1D1E639D003F8C18 /* AudioToolbox.framework */,
+				0790F1171D1E6332003F8C18 /* CoreMotion.framework */,
+				0790F1151D1E632D003F8C18 /* CoreMedia.framework */,
+				0790F1131D1E6325003F8C18 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07F531621E275B82009BFE58 /* OpenLiveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				07F531631E275B82009BFE58 /* OpenLiveUITests.swift */,
+				07F531651E275B82009BFE58 /* Info.plist */,
 			);
 			path = OpenLiveUITests;
 			sourceTree = "<group>";
 		};
-		D37941781FFB9B5700BFA0EC /* Products */ = {
+		D3D69BC52265B7D5005F82EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D37941811FFB9B5800BFA0EC /* AiyaEffectSDK.framework */,
-				D37941831FFB9B5800BFA0EC /* libAySDKCore.a */,
-				D37941851FFB9B5800BFA0EC /* libAyTrack.a */,
-				D37941871FFB9B5800BFA0EC /* libAyEffect.a */,
-				D37941891FFB9B5800BFA0EC /* libAyBeauty.a */,
-				D379418B1FFB9B5800BFA0EC /* libAyShortVideoEffect.a */,
+				D3D69BCE2265B7D5005F82EF /* AiyaEffectSDK.framework */,
+				D3D69BD02265B7D5005F82EF /* libAyCore.a */,
+				D3D69BD22265B7D5005F82EF /* libAyFaceTrack.a */,
+				D3D69BD42265B7D5005F82EF /* libAyEffect.a */,
+				D3D69BD62265B7D5005F82EF /* libAyBeauty.a */,
+				D3D69BD82265B7D5005F82EF /* libAyShortVideoEffect.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,56 +278,58 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07D24CF21D866704002C69BF /* OpenLive */ = {
+		078012E81D1E57730093DE24 /* OpenLive */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07D24D0A1D866704002C69BF /* Build configuration list for PBXNativeTarget "OpenLive" */;
+			buildConfigurationList = 078012FB1D1E57730093DE24 /* Build configuration list for PBXNativeTarget "OpenLive" */;
 			buildPhases = (
-				07D24CEF1D866704002C69BF /* Sources */,
-				07D24CF01D866704002C69BF /* Frameworks */,
-				07D24CF11D866704002C69BF /* Resources */,
-				D37941941FFB9BD700BFA0EC /* Embed Frameworks */,
+				078012E51D1E57730093DE24 /* Sources */,
+				078012E61D1E57730093DE24 /* Frameworks */,
+				078012E71D1E57730093DE24 /* Resources */,
+				D3D69BE62265BF85005F82EF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D379418D1FFB9B6000BFA0EC /* PBXTargetDependency */,
-				D37941931FFB9BD700BFA0EC /* PBXTargetDependency */,
+				D3D69BDB2265BF5B005F82EF /* PBXTargetDependency */,
+				D3D69BE52265BF85005F82EF /* PBXTargetDependency */,
 			);
 			name = OpenLive;
 			productName = OpenLive;
-			productReference = 07D24CF31D866704002C69BF /* OpenLive.app */;
+			productReference = 078012E91D1E57730093DE24 /* OpenLive.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07F5318B1E288883009BFE58 /* OpenLiveUITests */ = {
+		07F531601E275B82009BFE58 /* OpenLiveUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07F531951E288883009BFE58 /* Build configuration list for PBXNativeTarget "OpenLiveUITests" */;
+			buildConfigurationList = 07F531681E275B82009BFE58 /* Build configuration list for PBXNativeTarget "OpenLiveUITests" */;
 			buildPhases = (
-				07F531881E288883009BFE58 /* Sources */,
-				07F531891E288883009BFE58 /* Frameworks */,
-				07F5318A1E288883009BFE58 /* Resources */,
+				07F5315D1E275B82009BFE58 /* Sources */,
+				07F5315E1E275B82009BFE58 /* Frameworks */,
+				07F5315F1E275B82009BFE58 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				07F531921E288883009BFE58 /* PBXTargetDependency */,
+				07F531671E275B82009BFE58 /* PBXTargetDependency */,
 			);
 			name = OpenLiveUITests;
 			productName = OpenLiveUITests;
-			productReference = 07F5318C1E288883009BFE58 /* OpenLiveUITests.xctest */;
+			productReference = 07F531611E275B82009BFE58 /* OpenLiveUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		07D24CEB1D866704002C69BF /* Project object */ = {
+		078012E11D1E57730093DE24 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Agora;
 				TargetAttributes = {
-					07D24CF21D866704002C69BF = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = G29KBS7YUL;
+					078012E81D1E57730093DE24 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 67GM9ZTA2J;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -358,14 +337,14 @@
 							};
 						};
 					};
-					07F5318B1E288883009BFE58 = {
+					07F531601E275B82009BFE58 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 07D24CF21D866704002C69BF;
+						TestTargetID = 078012E81D1E57730093DE24;
 					};
 				};
 			};
-			buildConfigurationList = 07D24CEE1D866704002C69BF /* Build configuration list for PBXProject "OpenLive" */;
+			buildConfigurationList = 078012E41D1E57730093DE24 /* Build configuration list for PBXProject "OpenLive" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -373,82 +352,82 @@
 				en,
 				Base,
 			);
-			mainGroup = 07D24CEA1D866704002C69BF;
-			productRefGroup = 07D24CF41D866704002C69BF /* Products */;
+			mainGroup = 078012E01D1E57730093DE24;
+			productRefGroup = 078012EA1D1E57730093DE24 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D37941781FFB9B5700BFA0EC /* Products */;
-					ProjectRef = D37941771FFB9B5700BFA0EC /* AiyaEffectSDK.xcodeproj */;
+					ProductGroup = D3D69BC52265B7D5005F82EF /* Products */;
+					ProjectRef = D3D69BC42265B7D5005F82EF /* AiyaEffectSDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				07D24CF21D866704002C69BF /* OpenLive */,
-				07F5318B1E288883009BFE58 /* OpenLiveUITests */,
+				078012E81D1E57730093DE24 /* OpenLive */,
+				07F531601E275B82009BFE58 /* OpenLiveUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D37941811FFB9B5800BFA0EC /* AiyaEffectSDK.framework */ = {
+		D3D69BCE2265B7D5005F82EF /* AiyaEffectSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = AiyaEffectSDK.framework;
-			remoteRef = D37941801FFB9B5800BFA0EC /* PBXContainerItemProxy */;
+			remoteRef = D3D69BCD2265B7D5005F82EF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D37941831FFB9B5800BFA0EC /* libAySDKCore.a */ = {
+		D3D69BD02265B7D5005F82EF /* libAyCore.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libAySDKCore.a;
-			remoteRef = D37941821FFB9B5800BFA0EC /* PBXContainerItemProxy */;
+			path = libAyCore.a;
+			remoteRef = D3D69BCF2265B7D5005F82EF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D37941851FFB9B5800BFA0EC /* libAyTrack.a */ = {
+		D3D69BD22265B7D5005F82EF /* libAyFaceTrack.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libAyTrack.a;
-			remoteRef = D37941841FFB9B5800BFA0EC /* PBXContainerItemProxy */;
+			path = libAyFaceTrack.a;
+			remoteRef = D3D69BD12265B7D5005F82EF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D37941871FFB9B5800BFA0EC /* libAyEffect.a */ = {
+		D3D69BD42265B7D5005F82EF /* libAyEffect.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libAyEffect.a;
-			remoteRef = D37941861FFB9B5800BFA0EC /* PBXContainerItemProxy */;
+			remoteRef = D3D69BD32265B7D5005F82EF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D37941891FFB9B5800BFA0EC /* libAyBeauty.a */ = {
+		D3D69BD62265B7D5005F82EF /* libAyBeauty.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libAyBeauty.a;
-			remoteRef = D37941881FFB9B5800BFA0EC /* PBXContainerItemProxy */;
+			remoteRef = D3D69BD52265B7D5005F82EF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D379418B1FFB9B5800BFA0EC /* libAyShortVideoEffect.a */ = {
+		D3D69BD82265B7D5005F82EF /* libAyShortVideoEffect.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libAyShortVideoEffect.a;
-			remoteRef = D379418A1FFB9B5800BFA0EC /* PBXContainerItemProxy */;
+			remoteRef = D3D69BD72265B7D5005F82EF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		07D24CF11D866704002C69BF /* Resources */ = {
+		078012E71D1E57730093DE24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3CBC5951F220E16005C1616 /* gougou in Resources */,
-				07D24D061D866704002C69BF /* LaunchScreen.storyboard in Resources */,
-				07D24D031D866704002C69BF /* Assets.xcassets in Resources */,
-				D379418F1FFB9BCC00BFA0EC /* AiyaEffectSDK.bundle in Resources */,
-				07D24D011D866704002C69BF /* Main.storyboard in Resources */,
+				D3D69BF82265CA31005F82EF /* mogulin in Resources */,
+				078012F71D1E57730093DE24 /* LaunchScreen.storyboard in Resources */,
+				078012F41D1E57730093DE24 /* Assets.xcassets in Resources */,
+				D3D69BEB2265C95F005F82EF /* AiyaEffectSDK.bundle in Resources */,
+				078012F21D1E57730093DE24 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07F5318A1E288883009BFE58 /* Resources */ = {
+		07F5315F1E275B82009BFE58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -458,64 +437,63 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		07D24CEF1D866704002C69BF /* Sources */ = {
+		078012E51D1E57730093DE24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D24CFB1D866704002C69BF /* AppDelegate.m in Sources */,
-				07D24D361D867644002C69BF /* VideoSession.m in Sources */,
-				07D24D331D867644002C69BF /* ProfileCell.m in Sources */,
-				07D24CF81D866704002C69BF /* main.m in Sources */,
-				07D24D301D867644002C69BF /* KeyCenter.m in Sources */,
-				D32F4F5C1FC59EAD0028B16E /* AYRawBGRABufferUtil.m in Sources */,
-				07D24D321D867644002C69BF /* MainViewController.m in Sources */,
-				07D24D311D867644002C69BF /* LiveRoomViewController.mm in Sources */,
-				07D24D351D867644002C69BF /* VideoViewLayouter.m in Sources */,
-				07D24D341D867644002C69BF /* SettingsViewController.m in Sources */,
+				0790F1691D1EEAB2003F8C18 /* ProfileCell.swift in Sources */,
+				0790F1511D1E9631003F8C18 /* VideoSession.swift in Sources */,
+				078012EF1D1E57730093DE24 /* MainViewController.swift in Sources */,
+				D3D69BC32265B787005F82EF /* VideoProcess.mm in Sources */,
+				078012ED1D1E57730093DE24 /* AppDelegate.swift in Sources */,
+				07130E8A1D22928200CC85D8 /* KeyCenter.swift in Sources */,
+				0790F1531D1E9781003F8C18 /* VideoViewLayouter.swift in Sources */,
+				0790F1281D1E645B003F8C18 /* LiveRoomViewController.swift in Sources */,
+				0790F1261D1E6450003F8C18 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07F531881E288883009BFE58 /* Sources */ = {
+		07F5315D1E275B82009BFE58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F5318F1E288883009BFE58 /* OpenLiveUITests.m in Sources */,
+				07F531641E275B82009BFE58 /* OpenLiveUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		07F531921E288883009BFE58 /* PBXTargetDependency */ = {
+		07F531671E275B82009BFE58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07D24CF21D866704002C69BF /* OpenLive */;
-			targetProxy = 07F531911E288883009BFE58 /* PBXContainerItemProxy */;
+			target = 078012E81D1E57730093DE24 /* OpenLive */;
+			targetProxy = 07F531661E275B82009BFE58 /* PBXContainerItemProxy */;
 		};
-		D379418D1FFB9B6000BFA0EC /* PBXTargetDependency */ = {
+		D3D69BDB2265BF5B005F82EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AiyaEffectSDK;
-			targetProxy = D379418C1FFB9B6000BFA0EC /* PBXContainerItemProxy */;
+			targetProxy = D3D69BDA2265BF5B005F82EF /* PBXContainerItemProxy */;
 		};
-		D37941931FFB9BD700BFA0EC /* PBXTargetDependency */ = {
+		D3D69BE52265BF85005F82EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AiyaEffectSDK;
-			targetProxy = D37941921FFB9BD700BFA0EC /* PBXContainerItemProxy */;
+			targetProxy = D3D69BE42265BF85005F82EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		07D24CFF1D866704002C69BF /* Main.storyboard */ = {
+		078012F01D1E57730093DE24 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				07D24D001D866704002C69BF /* Base */,
+				078012F11D1E57730093DE24 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		07D24D041D866704002C69BF /* LaunchScreen.storyboard */ = {
+		078012F51D1E57730093DE24 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				07D24D051D866704002C69BF /* Base */,
+				078012F61D1E57730093DE24 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -523,7 +501,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		07D24D081D866704002C69BF /* Debug */ = {
+		078012F91D1E57730093DE24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -535,13 +513,12 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -563,15 +540,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		07D24D091D866704002C69BF /* Release */ = {
+		078012FA1D1E57730093DE24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -583,13 +561,12 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -605,102 +582,97 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		07D24D0B1D866704002C69BF /* Debug */ = {
+		078012FC1D1E57730093DE24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = G29KBS7YUL;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67GM9ZTA2J;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/OpenLive\"",
-					"$(PROJECT_DIR)/OpenLive",
-				);
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/OpenLive/libyuv/include\"",
-					"\"$(SRCROOT)/OpenLive/libyuv/include/libyuv\"",
+					"$(PROJECT_DIR)/../../libs",
 				);
 				INFOPLIST_FILE = OpenLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/OpenLive/libyuv/lib\"",
-					"\"$(SRCROOT)/OpenLive\"",
-					"$(PROJECT_DIR)/OpenLive/libyuv/lib",
-					"$(PROJECT_DIR)/OpenLive",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.OpenLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenLive/OpenLive-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		07D24D0C1D866704002C69BF /* Release */ = {
+		078012FD1D1E57730093DE24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = G29KBS7YUL;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67GM9ZTA2J;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/OpenLive\"",
-					"$(PROJECT_DIR)/OpenLive",
-				);
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/OpenLive/libyuv/include\"",
-					"\"$(SRCROOT)/OpenLive/libyuv/include/libyuv\"",
+					"$(PROJECT_DIR)/../../libs",
 				);
 				INFOPLIST_FILE = OpenLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/OpenLive/libyuv/lib\"",
-					"\"$(SRCROOT)/OpenLive\"",
-					"$(PROJECT_DIR)/OpenLive/libyuv/lib",
-					"$(PROJECT_DIR)/OpenLive",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.OpenLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenLive/OpenLive-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		07F531931E288883009BFE58 /* Debug */ = {
+		07F531691E275B82009BFE58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OpenLiveUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.OpenLiveUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = OpenLive;
 			};
 			name = Debug;
 		};
-		07F531941E288883009BFE58 /* Release */ = {
+		07F5316A1E275B82009BFE58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OpenLiveUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.OpenLiveUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = OpenLive;
 			};
 			name = Release;
@@ -708,34 +680,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07D24CEE1D866704002C69BF /* Build configuration list for PBXProject "OpenLive" */ = {
+		078012E41D1E57730093DE24 /* Build configuration list for PBXProject "OpenLive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07D24D081D866704002C69BF /* Debug */,
-				07D24D091D866704002C69BF /* Release */,
+				078012F91D1E57730093DE24 /* Debug */,
+				078012FA1D1E57730093DE24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07D24D0A1D866704002C69BF /* Build configuration list for PBXNativeTarget "OpenLive" */ = {
+		078012FB1D1E57730093DE24 /* Build configuration list for PBXNativeTarget "OpenLive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07D24D0B1D866704002C69BF /* Debug */,
-				07D24D0C1D866704002C69BF /* Release */,
+				078012FC1D1E57730093DE24 /* Debug */,
+				078012FD1D1E57730093DE24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07F531951E288883009BFE58 /* Build configuration list for PBXNativeTarget "OpenLiveUITests" */ = {
+		07F531681E275B82009BFE58 /* Build configuration list for PBXNativeTarget "OpenLiveUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07F531931E288883009BFE58 /* Debug */,
-				07F531941E288883009BFE58 /* Release */,
+				07F531691E275B82009BFE58 /* Debug */,
+				07F5316A1E275B82009BFE58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 07D24CEB1D866704002C69BF /* Project object */;
+	rootObject = 078012E11D1E57730093DE24 /* Project object */;
 }
