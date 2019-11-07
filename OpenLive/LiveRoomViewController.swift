@@ -8,6 +8,7 @@
 
 import UIKit
 import AgoraRtcEngineKit
+import AiyaEffectSDK
 
 protocol LiveRoomVCDelegate: NSObjectProtocol {
     func liveVCNeedClose(_ liveVC: LiveRoomViewController)
@@ -20,6 +21,8 @@ class LiveRoomViewController: UIViewController {
     @IBOutlet weak var broadcastButton: UIButton!
     @IBOutlet var sessionButtons: [UIButton]!
     @IBOutlet weak var audioMuteButton: UIButton!
+    @IBOutlet weak var beautyEffectButton: UIButton!
+    @IBOutlet weak var superResolutionButton: UIButton!
     
 // ---------- 哎吖科技添加 开始 ---------
     let videoProcess = VideoProcess()
@@ -42,7 +45,7 @@ class LiveRoomViewController: UIViewController {
     fileprivate var isMuted = false {
         didSet {
             rtcEngine?.muteLocalAudioStream(isMuted)
-            audioMuteButton?.setImage(UIImage(named: isMuted ? "btn_mute_cancel" : "btn_mute"), for: .normal)
+            audioMuteButton?.setImage(isMuted ? #imageLiteral(resourceName: "btn_mute_cancel.pdf") : #imageLiteral(resourceName: "btn_mute.pdf"), for: .normal)
         }
     }
     
@@ -64,6 +67,46 @@ class LiveRoomViewController: UIViewController {
     
     fileprivate let viewLayouter = VideoViewLayouter()
     
+    //MARK: - super resolution
+    var isEnableSuperResolution = false {
+        didSet {
+            superResolutionButton?.setImage(isEnableSuperResolution ? #imageLiteral(resourceName: "btn_sr_blue.pdf") : #imageLiteral(resourceName: "btn_sr.pdf"), for: .normal)
+        }
+    }
+    var highPriorityRemoteUid: UInt? {
+        didSet {
+            for session in videoSessions {
+                rtcEngine?.enableRemoteSuperResolution(session.uid, enabled: false)
+                rtcEngine?.setRemoteUserPriority(session.uid, type: .normal)
+            }
+            if let highPriorityRemoteUid = highPriorityRemoteUid {
+                if isEnableSuperResolution {
+                    rtcEngine?.enableRemoteSuperResolution(highPriorityRemoteUid, enabled: true)
+                }
+                rtcEngine?.setRemoteUserPriority(highPriorityRemoteUid, type: .high)
+            }
+        }
+    }
+    
+    //MARK: - Beauty
+    var isBeautyOn = true {
+        didSet {
+            guard let rtcEngine = rtcEngine else {
+                return
+            }
+            rtcEngine.setBeautyEffectOptions(isBeautyOn, options: beautyOptions)
+            beautyEffectButton?.setImage(isBeautyOn ? #imageLiteral(resourceName: "btn_beautiful_cancel") : #imageLiteral(resourceName: "btn_beautiful"), for: .normal)
+        }
+    }
+    let beautyOptions: AgoraBeautyOptions = {
+        let options = AgoraBeautyOptions()
+        options.lighteningContrastLevel = .normal
+        options.lighteningLevel = 0.7
+        options.smoothnessLevel = 0.5
+        options.rednessLevel = 0.1
+        return options
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,6 +114,7 @@ class LiveRoomViewController: UIViewController {
         updateButtonsVisiablity()
         
         loadAgoraKit()
+        isBeautyOn = true
         
 // ---------- 哎吖科技添加 开始 ---------
         NotificationCenter.default.addObserver(self, selector: #selector(licenseMessage(_:)), name: NSNotification.Name.AiyaLicense, object: nil)
@@ -80,6 +124,26 @@ class LiveRoomViewController: UIViewController {
         videoProcess.registerVideoFrameObserver(rtcEngine)
         videoProcess.setEffectPath(Bundle.main.path(forResource: "meta", ofType: "json", inDirectory: "mogulin"))
 // ---------- 哎吖科技添加 结束 ---------
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueId = segue.identifier else {
+            return
+        }
+        
+        switch segueId {
+        case "roomVCPopBeautyList":
+            let vc = segue.destination as! BeautyEffectTableViewController
+            vc.isBeautyOn = isBeautyOn
+            vc.smoothness = beautyOptions.smoothnessLevel
+            vc.lightening = beautyOptions.lighteningLevel
+            vc.contrast = beautyOptions.lighteningContrastLevel
+            vc.redness = beautyOptions.rednessLevel
+            vc.delegate = self
+            vc.popoverPresentationController?.delegate = self
+        default:
+            break
+        }
     }
     
     //MARK: - user action
@@ -100,9 +164,14 @@ class LiveRoomViewController: UIViewController {
         } else {
             clientRole = .broadcaster
         }
-        
+
         rtcEngine.setClientRole(clientRole)
         updateInterface(withAnimation :true)
+    }
+    
+    @IBAction func doSuperResolutionPressed(_ sender: UIButton) {
+        isEnableSuperResolution.toggle()
+        highPriorityRemoteUid = highPriorityRemoteUid(in: videoSessions, fullSession: fullSession)
     }
     
     @IBAction func doDoubleTapped(_ sender: UITapGestureRecognizer) {
@@ -147,7 +216,7 @@ private extension LiveRoomViewController {
             return
         }
         
-        broadcastButton?.setImage(UIImage(named: isBroadcaster ? "btn_join_cancel" : "btn_join"), for: UIControlState())
+        broadcastButton?.setImage(isBroadcaster ? #imageLiteral(resourceName: "btn_join_cancel.pdf") : #imageLiteral(resourceName: "btn_join"), for: .normal)
         
         for button in sessionButtons {
             button.isHidden = !isBroadcaster
@@ -189,7 +258,7 @@ private extension LiveRoomViewController {
 private extension LiveRoomViewController {
     func updateInterface(withAnimation animation: Bool) {
         if animation {
-            UIView.animate(withDuration: 0.3, animations: { [weak self] _ in
+            UIView.animate(withDuration: 0.3, animations: { [weak self] in
                 self?.updateInterface()
                 self?.view.layoutIfNeeded()
             })
@@ -205,27 +274,33 @@ private extension LiveRoomViewController {
         }
         viewLayouter.layout(sessions: displaySessions, fullSession: fullSession, inContainer: remoteContainerView)
         setStreamType(forSessions: displaySessions, fullSession: fullSession)
+        highPriorityRemoteUid = highPriorityRemoteUid(in: displaySessions, fullSession: fullSession)
     }
     
     func setStreamType(forSessions sessions: [VideoSession], fullSession: VideoSession?) {
         if let fullSession = fullSession {
             for session in sessions {
-                rtcEngine.setRemoteVideoStream(UInt(session.uid), type: (session == fullSession ? .high : .low))
+                if session == fullSession {
+                    rtcEngine.setRemoteVideoStream(fullSession.uid, type: .high)
+                } else {
+                    rtcEngine.setRemoteVideoStream(session.uid, type: .low)
+                }
             }
         } else {
             for session in sessions {
-                rtcEngine.setRemoteVideoStream(UInt(session.uid), type: .high)
+                rtcEngine.setRemoteVideoStream(session.uid, type: .high)
             }
         }
     }
     
-    func addLocalSession() {
+    func addLocalSession(fps: Int) {
         let localSession = VideoSession.localSession()
+        localSession.updateInfo(fps: fps)
         videoSessions.append(localSession)
         rtcEngine.setupLocalVideo(localSession.canvas)
     }
     
-    func fetchSession(ofUid uid: Int64) -> VideoSession? {
+    func fetchSession(ofUid uid: UInt) -> VideoSession? {
         for session in videoSessions {
             if session.uid == uid {
                 return session
@@ -235,7 +310,7 @@ private extension LiveRoomViewController {
         return nil
     }
     
-    func videoSession(ofUid uid: Int64) -> VideoSession {
+    func videoSession(ofUid uid: UInt) -> VideoSession {
         if let fetchedSession = fetchSession(ofUid: uid) {
             return fetchedSession
         } else {
@@ -244,28 +319,47 @@ private extension LiveRoomViewController {
             return newSession
         }
     }
+    
+    func highPriorityRemoteUid(in sessions: [VideoSession], fullSession: VideoSession?) -> UInt? {
+        if let fullSession = fullSession {
+            return fullSession.uid
+        } else {
+            return sessions.last?.uid
+        }
+    }
 }
 
 //MARK: - Agora Media SDK
 private extension LiveRoomViewController {
     func loadAgoraKit() {
-        rtcEngine = AgoraRtcEngineKit.sharedEngine(withAppId: KeyCenter.AppId, delegate: self)
+        rtcEngine.delegate = self        
         rtcEngine.setChannelProfile(.liveBroadcasting)
+        
+        // Warning: only enable dual stream mode if there will be more than one broadcaster in the channel
         rtcEngine.enableDualStreamMode(true)
+        
+        let fps = AgoraVideoFrameRate.fps24
+        
         rtcEngine.enableVideo()
-        rtcEngine.setVideoEncoderConfiguration(AgoraVideoEncoderConfiguration(size: videoProfile,
-                                                                              frameRate: .fps15,
-                                                                              bitrate: AgoraVideoBitrateStandard,
-                                                                              orientationMode: .adaptative))
+        rtcEngine.setVideoEncoderConfiguration(
+            AgoraVideoEncoderConfiguration(
+                size: videoProfile,
+                frameRate: fps,
+                bitrate: AgoraVideoBitrateStandard,
+                orientationMode: .adaptative
+            )
+        )
+        
         rtcEngine.setClientRole(clientRole)
         
         if isBroadcaster {
+            rtcEngine.setCameraCapturerConfiguration(AgoraCameraCapturerConfiguration())
             rtcEngine.startPreview()
         }
         
-        addLocalSession()
+        addLocalSession(fps: fps.rawValue)
         
-        let code = rtcEngine.joinChannel(byToken: nil, channelId: roomName, info: nil, uid: 0, joinSuccess: nil)
+        let code = rtcEngine.joinChannel(byToken: KeyCenter.Token, channelId: roomName, info: nil, uid: 0, joinSuccess: nil)
         if code == 0 {
             setIdleTimerActive(false)
             rtcEngine.setEnableSpeakerphone(true)
@@ -279,12 +373,13 @@ private extension LiveRoomViewController {
 
 extension LiveRoomViewController: AgoraRtcEngineDelegate {
     func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
-        let userSession = videoSession(ofUid: Int64(uid))
+        let userSession = videoSession(ofUid: uid)
         rtcEngine.setupRemoteVideo(userSession.canvas)
     }
     
     func rtcEngine(_ engine: AgoraRtcEngineKit, firstLocalVideoFrameWith size: CGSize, elapsed: Int) {
-        if let _ = videoSessions.first {
+        if let selfSession = videoSessions.first {
+            selfSession.updateInfo(resolution: size)
             updateInterface(withAnimation: false)
         }
     }
@@ -292,7 +387,7 @@ extension LiveRoomViewController: AgoraRtcEngineDelegate {
     func rtcEngine(_ engine: AgoraRtcEngineKit, didOfflineOfUid uid: UInt, reason: AgoraUserOfflineReason) {
         var indexToDelete: Int?
         for (index, session) in videoSessions.enumerated() {
-            if session.uid == Int64(uid) {
+            if session.uid == uid {
                 indexToDelete = index
             }
         }
@@ -305,5 +400,44 @@ extension LiveRoomViewController: AgoraRtcEngineDelegate {
                 fullSession = nil
             }
         }
+    }
+    
+    func rtcEngine(_ engine: AgoraRtcEngineKit, networkQuality uid: UInt, txQuality: AgoraNetworkQuality, rxQuality: AgoraNetworkQuality) {
+        let userSession = videoSession(ofUid: uid)
+        userSession.updateInfo(txQuality: txQuality, rxQuality: rxQuality)
+    }
+    
+    func rtcEngine(_ engine: AgoraRtcEngineKit, reportRtcStats stats: AgoraChannelStats) {
+        if let selfSession = videoSessions.first {
+            selfSession.updateChannelStats(stats)
+        }
+    }
+    
+    func rtcEngine(_ engine: AgoraRtcEngineKit, remoteVideoStats stats: AgoraRtcRemoteVideoStats) {
+        let userSession = videoSession(ofUid: stats.uid)
+        userSession.updateVideoStats(stats)
+    }
+    
+    func rtcEngine(_ engine: AgoraRtcEngineKit, remoteAudioStats stats: AgoraRtcRemoteAudioStats) {
+        let userSession = videoSession(ofUid: stats.uid)
+        userSession.updateAudioStats(stats)
+    }
+}
+
+//MARK: - enhancer
+extension LiveRoomViewController: BeautyEffectTableVCDelegate {
+    func beautyEffectTableVCDidChange(_ enhancerTableVC: BeautyEffectTableViewController) {
+        beautyOptions.lighteningLevel = enhancerTableVC.lightening
+        beautyOptions.smoothnessLevel = enhancerTableVC.smoothness
+        beautyOptions.lighteningContrastLevel = enhancerTableVC.contrast
+        beautyOptions.rednessLevel = enhancerTableVC.redness
+        isBeautyOn = enhancerTableVC.isBeautyOn
+    }
+}
+
+//MARK: - vc
+extension LiveRoomViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
     }
 }

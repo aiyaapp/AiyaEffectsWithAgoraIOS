@@ -10,7 +10,7 @@
 
 ## 3. 注意事项
 * AiyaEffectSDK.xcodeproj 需要到 [AiyaEffectsSDK ios](https://github.com/aiyaapp/AiyaEffectsIOS) 项目下载
-* [声网SDK版本 2.3.3](https://docs.agora.io/cn/Video/rawdata_ios?platform=iOS)
+* 下载声网Libs [声网SDK版本 2.9.1](https://docs.agora.io/cn/Video/downloads)
 
 
 ## 4. 反馈与建议

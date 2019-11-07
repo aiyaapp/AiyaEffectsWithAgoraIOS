@@ -52,6 +52,13 @@ public:
             } else if (videoFrame.rotation == 90) {
                 [handler setRotateMode:kAYGPUImageRotateRightFlipVertical];
             }
+            
+            std::cout
+            << "videoFrame.width "
+            << videoFrame.width
+            << " videoFrame.height "
+            << videoFrame.height
+            << std::endl;
 
             [handler processWithYBuffer:videoFrame.yBuffer uBuffer:videoFrame.uBuffer vBuffer:videoFrame.vBuffer width:videoFrame.width height:videoFrame.height];
             [EAGLContext setCurrentContext:context];
